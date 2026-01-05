@@ -1,0 +1,11 @@
+# Ignore node_modules anywhere in the project (frontend or backend)
+**/node_modules/
+
+# Ignore .env files anywhere
+**/.env
+
+# Standard ignores
+.DS_Store
+dist/
+build/
+coverage/
