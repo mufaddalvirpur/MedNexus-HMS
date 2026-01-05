@@ -12,7 +12,7 @@ const DashboardCards = () => {
   });
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/dashboardcards")
+    fetch("https://mednexus-hms.onrender.com/api/dashboardcards")
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching cards:", error));

@@ -9,7 +9,7 @@ const BookedAppointments = () => {
 
   const fetchAppointments = async () => {
     try {
-      const response = await fetch("http://localhost:5000/appointments");
+      const response = await fetch("https://mednexus-hms.onrender.com/appointments");
       const data = await response.json();
       setAppointments(data.slice(0, 4)); // Display only 4 latest appointments
     } catch (error) {

@@ -31,7 +31,7 @@
 // //   useEffect(() => {
 // //     const fetchPatients = async () => {
 // //       try {
-// //         const response = await axios.get("http://localhost:5000/patients"); // Adjust the endpoint as per your backend
+// //         const response = await axios.get("https://mednexus-hms.onrender.com/patients"); // Adjust the endpoint as per your backend
 // //         const patientsData = response.data.map((p, index) => ({
 // //           ...p,
 // //           id: p.id || index + 1, // Ensure each patient has an ID
@@ -73,7 +73,7 @@
 // //       const newId = patients.length > 0 ? Math.max(...patients.map(p => p.id)) + 1 : 1; // Generate sequential ID
 // //       const newPatientWithId = { ...newPatient, id: newId };
 
-// //       const response = await axios.post("http://localhost:5000/patients", newPatientWithId);
+// //       const response = await axios.post("https://mednexus-hms.onrender.com/patients", newPatientWithId);
 // //       setPatients([...patients, response.data]); // Add new patient to state
 
 // //       setShowForm(false);
@@ -277,7 +277,7 @@
 //   useEffect(() => {
 //     const fetchPatients = async () => {
 //       try {
-//         const response = await axios.get("http://localhost:5000/patients"); // Adjust the endpoint as per your backend
+//         const response = await axios.get("https://mednexus-hms.onrender.com/patients"); // Adjust the endpoint as per your backend
 //         const patientsData = response.data.map((p, index) => ({
 //           ...p,
 //           id: p.id || index + 1, // Ensure each patient has an ID
@@ -319,7 +319,7 @@
 //       const newId = patients.length > 0 ? Math.max(...patients.map(p => p.id)) + 1 : 1; // Generate sequential ID
 //       const newPatientWithId = { ...newPatient, id: newId };
 
-//       const response = await axios.post("http://localhost:5000/patients", newPatientWithId);
+//       const response = await axios.post("https://mednexus-hms.onrender.com/patients", newPatientWithId);
 //       setPatients([...patients, response.data]); // Add new patient to state
 
 //       setShowForm(false);
@@ -521,7 +521,7 @@ const Patient = () => {
   useEffect(() => {
     const fetchPatients = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/patients");
+        const response = await axios.get("https://mednexus-hms.onrender.com/patients");
         const patientsData = response.data.map((p, index) => ({
           ...p,
           id: p.id || index + 1,
@@ -559,7 +559,7 @@ const Patient = () => {
       const newId = patients.length > 0 ? Math.max(...patients.map(p => p.id)) + 1 : 1;
       const newPatientWithId = { ...newPatient, id: newId };
 
-      const response = await axios.post("http://localhost:5000/patients", newPatientWithId);
+      const response = await axios.post("https://mednexus-hms.onrender.com/patients", newPatientWithId);
       setPatients([...patients, response.data]);
 
       setShowForm(false);

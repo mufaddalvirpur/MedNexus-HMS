@@ -17,7 +17,7 @@ const Sidebar = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.get("http://localhost:5000/auth/logout", {
+      await axios.get("https://mednexus-hms.onrender.com/auth/logout", {
         withCredentials: true,
       });
       localStorage.removeItem("user");

@@ -21,7 +21,7 @@ const Appointment = () => {
 
   const fetchAppointments = async () => {
     try {
-      const response = await fetch("http://localhost:5000/appointments");
+      const response = await fetch("https://mednexus-hms.onrender.com/appointments");
       const data = await response.json();
       setAppointments(data);
     } catch (error) {
@@ -41,7 +41,7 @@ const Appointment = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/appointments", {
+      const response = await fetch("https://mednexus-hms.onrender.com/appointments", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -60,7 +60,7 @@ const Appointment = () => {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`http://localhost:5000/appointments/${id}`, {
+      await fetch(`https://mednexus-hms.onrender.com/appointments/${id}`, {
         method: "DELETE",
       });
       setAppointments(
@@ -85,7 +85,7 @@ const Appointment = () => {
   const handleUpdate = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/appointments/${editMode}`,
+        `https://mednexus-hms.onrender.com/appointments/${editMode}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

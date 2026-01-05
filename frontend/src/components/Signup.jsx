@@ -19,7 +19,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/auth/signup", formData);
+      await axios.post("https://mednexus-hms.onrender.com/auth/signup", formData);
       navigate("/login");
     } catch (error) {
       alert(error.response.data.error);

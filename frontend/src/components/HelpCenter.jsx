@@ -7,7 +7,7 @@ const HelpCenter = () => {
   const [faqs, setFaqs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/faqs")
+    fetch("https://mednexus-hms.onrender.com/api/faqs")
       .then((res) => res.json())
       .then((data) => setFaqs(data))
       .catch((err) => console.error("Error fetching FAQs:", err));

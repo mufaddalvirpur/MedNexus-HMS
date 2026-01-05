@@ -58,7 +58,7 @@ const Doctor = () => {
   const fetchDoctors = async () => {
     try {
       setLoading(true)
-      const response = await axios.get("http://localhost:5000/api/doctors", {
+      const response = await axios.get("https://mednexus-hms.onrender.com/api/doctors", {
         params: {
           page: currentPage,
           search: searchQuery,
@@ -87,7 +87,7 @@ const Doctor = () => {
   const handleAddDoctor = async (doctorData) => {
     console.log(doctorData)
     try {
-      await axios.post("http://localhost:5000/api/doctors", doctorData)
+      await axios.post("https://mednexus-hms.onrender.com/api/doctors", doctorData)
       fetchDoctors()
       setIsModalOpen(false)
     } catch (err) {
@@ -99,7 +99,7 @@ const Doctor = () => {
   // Fixed edit doctor handler to properly update the doctor data
   const handleEditDoctor = async (doctorData) => {
     try {
-      await axios.put(`http://localhost:5000/api/doctors/${editingDoctor._id}`, doctorData)
+      await axios.put(`https://mednexus-hms.onrender.com/api/doctors/${editingDoctor._id}`, doctorData)
       fetchDoctors()
       setIsModalOpen(false)
       setEditingDoctor(null)
@@ -112,7 +112,7 @@ const Doctor = () => {
   // Fixed delete doctor handler to properly delete the doctor
   const handleDeleteDoctor = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/doctors/${id}`)
+      await axios.delete(`https://mednexus-hms.onrender.com/api/doctors/${id}`)
       fetchDoctors()
       setShowDeleteConfirm(null)
     } catch (err) {

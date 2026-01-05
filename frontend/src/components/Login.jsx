@@ -28,7 +28,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:5000/auth/login", formData);
+      const { data } = await axios.post("https://mednexus-hms.onrender.com/auth/login", formData);
 
       if (data.user) {
         localStorage.setItem("user", JSON.stringify(data.user)); 
