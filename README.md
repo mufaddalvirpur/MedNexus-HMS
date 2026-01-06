@@ -9,7 +9,7 @@ MedNexus is a comprehensive **Hospital Management System** designed to streamlin
 | Component | URL | Status |
 | :--- | :--- | :--- |
 | **Frontend (Live Site)** | [https://mednexus-hms.vercel.app](https://mednexus-hms.vercel.app) | 🟢 Live |
-| **Backend (API)** | [https://mednexus-backend.onrender.com](https://mednexus-backend.onrender.com) | 🟢 Live |
+| **Backend (API)** | [https://mednexus-hms.onrender.com](https://mednexus-hms.onrender.com) | 🟢 Live |
 
 ---
 
@@ -67,3 +67,10 @@ ADMIN_USERNAME=muffy
 ADMIN_PASSWORD=your_secure_password
 ADMIN_ID=admin_user_123
 ADMIN_ROLE=admin
+```
+
+### **Frontend (`frontend/.env`)**
+Create a `.env` file in the `frontend` folder:
+
+```env
+VITE_API_URL=[https://mednexus-backend.onrender.com](https://mednexus-backend.onrender.com) # Change to Render URL in production
