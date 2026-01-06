@@ -74,3 +74,59 @@ Create a `.env` file in the `frontend` folder:
 
 ```env
 VITE_API_URL=[https://mednexus-backend.onrender.com](https://mednexus-backend.onrender.com) # Change to Render URL in production
+```
+
+## 💻 Installation & Setup Guide
+**Follow these steps to run the project locally on your machine.**
+
+### 1. Clone the Repository
+
+```
+git clone [https://github.com/mufaddalvirpur/MedNexus-HMS.git](https://github.com/mufaddalvirpur/MedNexus-HMS.git)
+cd MedNexus-HMS
+```
+
+### 2. Backend Setup
+**Navigate to the backend folder, install dependencies, and start the server.**
+
+```
+cd backend
+npm install        # Install server dependencies
+npm start          # Start the server (runs on port 5000)
+You should see: ✅ MongoDB connected successfully
+```
+
+### 3. Frontend Setup
+**Open a new terminal, navigate to the frontend folder, install dependencies, and start the React app.**
+
+```
+cd frontend
+npm install        # Install client dependencies
+npm run dev        # Start Vite development server
+The app will run at: http://localhost:5173
+```
+
+## 📂 Project Structure
+
+```
+MedNexus-HMS/
+├── frontend/          # React Vite Frontend
+│   ├── src/
+│   │   ├── components/  # Reusable components (Navbar, Sidebar, etc.)
+│   │   ├── pages/       # Dashboard, Login, Doctor, Patient pages
+│   │   ├── App.jsx      # Main Routes & Protected Route Logic
+│   │   └── main.jsx     # Entry point
+│   └── package.json
+│
+├── backend/           # Node.js Express Backend
+│   ├── models/        # Mongoose Schemas (User, Doctor, Appointment)
+│   ├── routes/        # API Routes (Auth, Patients, Doctors)
+│   ├── server.js      # Server entry point
+│   └── package.json
+│
+└── README.md          # Project Documentation
+```
+
+## 📞 Contact
+
+### **Mufaddal Virpur**
